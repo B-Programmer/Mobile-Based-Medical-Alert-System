@@ -1,0 +1,151 @@
+<?php 
+session_start();
+include("resources/dbconnect.php");
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login</title>
+<link rel = "stylesheet" type = "text/css" href="resources/Library Style.css" />
+<style type="text/css">
+<!--
+.hh {
+	text-align: center;
+	color: #00F;
+}
+col {
+	color: #006;
+}
+.hh marquee {
+	text-align: right;
+	font-weight: bold;
+	color: #00F;
+}
+.ww {color: #F00;
+	text-decoration: blink;
+}
+-->
+</style>
+</head>
+
+<body align="center">
+<table width="75%" border="0" align="center">
+  <tr>
+    <td><img src="images/banner.png" width="100%" height="248" alt="yyyy" /></td>
+  </tr>
+  <tr>
+    <td><table width="30%" border="0" align="right" background="images/banna.jpg">
+      <tr>
+       <td width="52%"><img src="images/about.jpg" width="100%" height="20" alt="us" /></td>
+       <td width="48%"><img src="images/Logout.jpg" width="100%" height="20" alt="jhhj" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr valign="middle">
+    <td align="center" class="hh"><table width="100%" border="0">
+      <tr>
+        <td width = "20%">&nbsp;</td>
+        <td width="60%" bgcolor="#0099CC"><table width="100%" height="466" border="0" bgcolor = "#FFFFFF">
+          <tr>
+            <th height="48" align="left" valign="top" scope="col"><img src="Images/Add doctor.png" width="178" height="46" alt="Create User" /></th>
+          </tr>
+          <tr>
+            <td height="28"><blockquote>
+              <p><span class="style2">*Fill the form below with necessary informations</span><br />
+              </p>
+              </blockquote>
+             </td></tr>
+          <tr>
+          	<td>   <blockquote>
+              <table width="100%" height="305" border="0">
+                <form action="" method="post" name="form1" id="form1" onsubmit="MM_validateForm('Surname','','R','Othername','','R','PhoneNo','','RisNum');return document.MM_returnValue">
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Doctor' s Id:</span></td>
+                      <td width="63%" scope="col"><span class="style5">
+                        <input name="Username" type="text" id="Username" size="40" readonly="readonly"/>
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Name:</span></td>
+                      <td><span class="style5">
+                        <input name="Surname" type="text" id="Surname" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Address:</span></td>
+                      <td><span class="style5">
+                        <input name="Othername" type="text" id="Othername" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Sex:</span></td>
+                      <td><select name="Sex" id="Sex">
+                        <option selected="selected">MALE</option>
+                        <option>FEMALE</option>
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">E-mail Address:</span></td>
+                      <td><span class="style5">
+                        <input name="Address" type="text" id="Address" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Phone No.:</span></td>
+                      <td><span class="style5">
+                        <input name="PhoneNo" type="text" id="PhoneNo" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Registration Date:</span></td>
+                      <td><span class="style5">
+                        <input name="RegDate" type="text" id="RegDate" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5">Age:</span></td>
+                      <td><span class="style5">
+                        <input name="Department" type="text" id="Department" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td width="37%" align="right" class="style1" scope="col"><span class="style5"> Specialization:</span></td>
+                      <td><span class="style5">
+                        <input name="MatricNo" type="text" id="MatricNo" size="40" />
+                      </span></td>
+                    </tr>
+                    <tr>
+                      <td class="style1">&nbsp;</td>
+                      <td><span class="style5">
+                        <input type="submit" name="BtnCreate" id="BtnCreate" value="Submit" />
+                        <input type="reset" name="BtnCancel" id="BtnCancel" value="Cancel" />
+                      </span></td>
+                    </tr>
+                  </form>
+                </table>
+                <p class="style5">&nbsp;</p>
+            </blockquote></td>
+          </tr>
+          
+          <tr>
+            <td><blockquote><br /></blockquote></td>
+          </tr>
+        </table></td>
+        <td width = "20%"></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="hh"><marquee>
+    Welcome to Mobile-Based Medical Alert System!!!
+    </marquee></td>
+  </tr>
+   <tr>
+    <td class="hh">
+    <img src="images/footer.png" width="100%" height="53" alt="uu" />
+    </td>
+  </tr>
+</table>
+</body>
+</html>
